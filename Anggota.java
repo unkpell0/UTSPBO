@@ -6,4 +6,6 @@ public class Anggota {
         this.idAnggota = idAnggota;
         this.nama = nama;
     }
+
+    public String getNama() { return nama; }
 }

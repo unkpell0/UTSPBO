@@ -5,9 +5,10 @@ public class PetugasSirkulasi {
 
     // hanya mencetak, tidak menyimpan hasil
     public void cetakDenda(Koleksi k) {
-        System.out.println("=== Rincian Denda ===");
-        System.out.println("Koleksi   : " + k.judul + " (" + k.getJenis() + ")");
-        System.out.println("Terlambat : " + k.hariTerlambat + " hari");
-        System.out.println("Denda     : Rp" + k.hitungDenda());
+        String peminjam = (k.peminjam != null) ? k.peminjam.getNama() : "-";
+        System.out.println("[" + k.getJenis() + "] " + k.kode + " " + k.judul
+                + " | Peminjam: " + peminjam
+                + " | Terlambat " + k.hariTerlambat + " hari"
+                + " | Denda: " + k.hitungDenda());
     }
 }
